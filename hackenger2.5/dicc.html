@@ -1,0 +1,61 @@
+<!--Qr8-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>This is just gr8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body style="text-align: center">
+<h1>This is just gr8...</h1>
+<div style="max-width: 300px; display: inline-block">
+<p style="text-align: left !important;">>>> ??????????<br>
+...<br>
+Beautiful is better than ugly.<br>
+...<br>
+Special cases aren't special enough to break the rules.<br>
+...<br>
+<br>
+# Find line 2**4-2**2-2
+</p>
+</div>
+
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/N6nWmbc7xe73c4RHiljBM29izZ3pEqb8duepRvh1xrId4HLr3G/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("boiiiii ur wrong",$("#userInp").val() + "... wat is dis bro?","error");
+			} else{
+				swal("Aye GG","Winner Winner Dinner Chicken","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+</body>
+</html>

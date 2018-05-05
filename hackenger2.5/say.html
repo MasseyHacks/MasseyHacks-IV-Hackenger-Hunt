@@ -1,0 +1,51 @@
+<!--Q???-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question ???</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<h1>Question ???</h1>
+<div id = "btnContainer">
+	<h2>What did I say?</h2>
+
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/2CBmQeuu0wKK7ti6vAwkUwgxNkxrwWKX1yfGEKm6q0Fc3fZEEU/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Access Denied","Wat? no","error");
+			} else{
+				swal("Access Granted","Winner winner chicken dinner :)","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+</body>
+</html>
