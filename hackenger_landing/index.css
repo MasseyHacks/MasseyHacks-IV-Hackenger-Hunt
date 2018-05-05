@@ -1,0 +1,14 @@
+/* CSS Document */
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+a{
+	text-decoration:none;
+	padding:10px;
+	font-size:20px;
+	background:#9AE;
+	color:black;
+}
+a:hover{
+	background:#ABF;
+}

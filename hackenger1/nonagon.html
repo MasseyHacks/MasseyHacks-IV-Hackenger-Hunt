@@ -1,0 +1,39 @@
+<!--Q2-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>World</title>
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<p>Technology has done many wonders in our world. But one of the most prominent examples of technology at its finest is how satellite imaging has disproved the fact that Vincent Massey Secondary School's library is a nonagon! What shape is the library?</p>
+<p><span style = "font-size:12px"><em>Note: You cannot under any circumstances leave school grounds!</em></span></p>
+
+<input type = "text" id = "userInp" /><button id = "sub">Submit</button>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/oeOgMZKkucyUWk6UWyVcNDPZkBQczudOySS8FsgXuFIeNCWzYIzz9dojE2l3mmHI2pHyGNlYgR3TkPg6lEwkHKtbDC2NPymFNT3h/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+
+</body>
+</html>

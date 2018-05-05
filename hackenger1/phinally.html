@@ -1,0 +1,53 @@
+<!--Q6-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<h1>Question 6</h1>
+<p>Its 2018 and phinally things are starting to add up.</p>
+
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/sO8xpceSWxNW8dyeKO24kLuAYxvHVqBc2xxfzAXjXA5VEr0c6S4etmEfKYKtcbt4wR9ThW24lWONdEN7kHaDREGrqgJsi2mCJjmO/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+
+
+</body>
+</html>

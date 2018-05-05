@@ -1,0 +1,189 @@
+/* General styling*/
+@font-face {
+    font-family: RalewayExtraBold;
+    src: url("/fonts/Raleway-ExtraBold.ttf");
+}
+@font-face {
+    font-family: RalewaySemiBold;
+    src: url("/fonts/Raleway-SemiBold.ttf");
+}
+@font-face{
+    font-family: RalewayThin;
+    src: url("/fonts/Raleway-Thin.ttf");
+}
+@font-face{
+    font-family: RalewayRegular;
+    src: url("/fonts/Raleway-Regular.ttf");
+}
+@font-face{
+    font-family: RalewayLight;
+    src: url("/fonts/Raleway-Light.ttf");
+}
+*{
+    font-family: RalewayRegular, sans-serif !important;
+}
+body{
+	padding:10px;
+}
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 4em;
+    text-align:center;
+    margin-bottom: 10px;
+}
+h2{
+	margin-top:0px;
+	margin-bottom:10px;
+}
+h3{
+    font-size: 3.5em;
+}
+
+h4{
+    font-size: 1.4em;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+	margin:0px;
+	text-align:center !important;
+}
+
+
+
+/* Tints */
+.translucent-1{
+    background: rgb(151, 160, 230); /* Fallback for older browsers without RGBA-support */
+    background: rgba(151, 160, 230, 0.5);
+}
+.translucent-2{
+    background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+    background: rgba(59, 70, 85, 0.8);
+}
+.translucent-3{
+    background: rgb(151, 160, 230); /* Fallback for older browsers without RGBA-support */
+    background: rgba(49, 60, 75, 0.8);
+}
+.translucent-4{
+    background: rgb(59, 70, 85); /* Fallback for older browsers without RGBA-support */
+    background: rgba(59, 70, 85, 1.0);
+}
+#btnContainer{
+	text-align:center;
+}
+#userInp {
+	width:100%;
+	margin-top:10px;
+	margin-bottom:10px;
+	max-width:300px;
+}
+#sub {
+	width:100%;
+	max-width:300px;
+}
+/*@media screen and (min-width: 900px){
+	#userInp{
+		font-size:large;
+	}
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px)  {
+	#userInp{
+		font-size:large;
+	}
+}
+
+/* Larger Screens *//*
+@media screen and (min-width: 720px) {
+	*{
+		font-size:large;
+	}
+	#userInp{
+		font-size:large;
+	}
+}
+
+/* Smaller Screens */
+@media screen and (max-width:720px){
+	h1{
+		font-size:36px;
+	}
+}
+/*
+#smallcaption {
+    display: none;
+    visibility: hidden;
+}
+#bigcaption {
+    display: block;
+    visibility: visible;
+}
+#accordion {
+    display: none;
+    visibility: hidden;
+}
+#full-faq {
+    display: block;
+    visibility: visible;
+}
+#navham {
+    display: none;
+    visibility: hidden;
+}
+#outer-social {
+    display: none;
+    visibility: hidden;
+}
+#navleft {
+    display: block;
+    visibility: visible
+}
+#navright {
+    display: block;
+    visibility: visible
+}
+
+@media screen and (max-width:767px) {
+    #smallcaption {
+        display: block;
+        visibility: visible;
+    }
+    #bigcaption {
+        display: none;
+        visibility: hidden;
+    }
+    #accordion {
+        display: block;
+        visibility: visible;
+    }
+    #full-faq {
+        display: none;
+        visibility: hidden;
+    }
+    #navham {
+        display: block;
+        visibility: visible;
+    }
+    #outer-social {
+        display: block;
+        visibility: visible;
+    }
+    #navleft {
+        display: none;
+        visibility: hidden;
+    }
+    #navright {
+        display: none;
+        visibility: hidden;
+    }
+}*/

@@ -1,0 +1,94 @@
+/* General styling*/
+@font-face{
+    font-family: RalewayRegular;
+    src: url("Raleway-Regular.ttf");
+}
+*{
+    font-family: RalewayRegular, sans-serif;
+}
+body{
+    background: url('websitebkg.svg');
+	background-size:100vmax;
+}
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+a{
+	text-decoration:none;
+}
+h1 {
+    font-size: 4em !important;
+    text-align:center;
+	margin-top:0px;
+}
+h2{
+	font-size:2.5em !important;
+}
+#header {
+	position:absolute;
+	top:0px;
+	background:rgba(0,0,0,0.3);
+	width:100vw;
+    height: 100vh;
+    display: block;
+    color: white !important;
+    margin-top: 0px;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0% !important;
+    padding-bottom: 0%;
+}
+.valignmid {
+	position:relative;
+	top:50%;
+	transform: translateY(-50%); 
+	margin:0px;
+}
+.apply-button {
+    font-size: 1.5em !important;
+    width: 230px !important;
+    height: 50px;
+    background-color: transparent !important;
+    color: white !important;
+    border-color: white !important;
+}
+.apply-button:hover {
+    background-color: white !important;
+    color: #0A1939 !important;
+    border-color: white !important;
+}
+.btn {
+    width: 150px;
+    background-color: white;
+    color: #0A1939;
+    border-color: #0A1939;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.btn:hover {
+    background-color: #0A1939;
+    color: white;
+    border-color: #0A1939;
+}
+@media screen and (min-width: 900px){
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px)  {
+}
+
+/* Larger Screens */
+@media screen and (min-width: 720px) {
+}
+
+/* Smaller Screens */
+@media screen and (max-width:720px) {
+	h1{
+		font-size:2.5em !important;
+	}
+	h2{
+		font-size:1.5em !important;
+	}
+}

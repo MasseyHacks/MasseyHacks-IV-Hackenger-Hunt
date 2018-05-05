@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackenger Hunt</title>
+<link href = "main.css" rel = "stylesheet" type = "text/css" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id = "header">
+	<div class = "valignmid">
+		<center><h1>Welcome to the Hackenger Hunt!</h1>
+		<h2>Choose a starting point</h2>
+		<button id = "hck1" class = "btn apply-button">Hackenger 1 (Easy)</button>
+		<button id = "hck2" class = "btn apply-button">Hackenger 2 (Hard)</button></center>
+	</div>
+</div>
+<script src="sweetalert2.all.js"></script>
+<script>
+	$(document).ready(function(){
+		var d = new Date();
+		var hckstart = new Date(2018,4,26,14,30);
+		var hckstart2 = new Date(2018,4,26,20,30);
+		$("#hck1").click(function(){
+			/*
+				swal("Sorry, the Hackenger Hunt is not ready yet!");
+			} else{*/
+			
+window.location = "https://1.hackenger.com";
+			
+		});
+		
+		$("#hck2").click(function(){/*
+			if(d
+				swal("Sorry, the Hackenger Hunt is not ready yet!");
+			} else{*/
+				window.location = "https://2.hackenger.com";
+			
+		});
+	});
+</script>
+</body>
+</html>

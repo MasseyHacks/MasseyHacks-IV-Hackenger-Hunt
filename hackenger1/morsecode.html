@@ -1,0 +1,57 @@
+<!--Q8-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<h1>Question 8</h1>
+<p>A flicker, a flame, a light in the sky!<br>
+Go to the front rotunda and look up high<br>
+For the secret code as it flashes by...<br>
+<br>
+Quick! You might miss the shining display!<br>
+Run, go, off and away!<br>
+Decode the message and type it here, eh!</p>
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/7EZCY6yTVQpCb2PiX3Y2EwO4tSaXkkbgO0IAU6jELw6KpJTaCF341FZimX3w74CJT89D3h5CD1cQATP0oIVebIknveKr8a0P9Yj2/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+
+</body>
+</html>

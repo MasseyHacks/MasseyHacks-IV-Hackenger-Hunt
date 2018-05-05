@@ -1,0 +1,58 @@
+<!--Q3-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<h1>Question 3</h1>
+<p style = "word-break:break-all">W1swLDAsMCwwLDEsMSwxLDEsMCwwLDAsMF0sIFswLDAsMCwxLDIsMCwwLDAsMSwwLDAsMF0sIFswLDAsMSwyLDIsMiwwLDAsMCwxLDAsMF0sIFswLDAsMSwyLDIsMiwwLDAsMCwxLDAsMF0sIFswLDEsMiwyLDIsMCwwLDAsMCwwLDEsMF0sIFswLDEsMiwyLDAsMCwwLDAsMCwwLDEsMF0sIFsxLDAsMCwwLDAsMCwwLDAsMiwwLDAsMV0sIFsxLDAsMCwwLDAsMCwwLDIsMiwyLDAsMV0sIFsxLDAsMCwwLDAsMCwwLDIsMiwyLDAsMV0sICBbMSwwLDIsMiwyLDAsMCwwLDIsMCwwLDFdLCBbMSwyLDIsMiwyLDIsMCwwLDAsMCwwLDFdLCBbMCwxLDIsMiwyLDIsMiwwLDAsMCwxLDBdLCBbMCwwLDEsMSwyLDIsMiwwLDEsMSwwLDBdLCBbMCwwLDAsMCwxLDEsMSwxLDAsMCwwLDBdXQoKR2l2ZW4gaXMgYSBsaXN0IHRoYXQgY29kZXMgZm9yIDE0IHJvd3Mgb2YgMTIgc3F1YXJlcyBlYWNoLgowIGNvZGVzIGZvciBhIHdoaXRlIHNxdWFyZSwgMSBjb2RlcyBmb3IgYSBibGFjayBzcXVhcmUsIGFuZCAyIGNvZGVzIGZvciBhIGdyZWVuIHNxdWFyZS4KCldoYXQgcGljdHVyZSBkb2VzIHRoZSBncmlkIG1ha2U/Cg==</p>
+<p>HINT:</p>
+<pre>
+for i in range(64):
+	print("A: Bro wanna get some acid?")
+	print("B: Nah man, quite the opposite")
+	print("A: How basic.")
+</pre>
+<p>Yes, this is somewhat of a DDLC reference.</p>
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/fFEDCkmdukOFNUsP0q3dV22SrnlCWZw1u1sUbEYtPAYqkg5buWcdP3W4g7u0UQRcH9XGCLYfbKvjPoi78lbNcXFgSZ6AGLCbIpGa/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+</body>
+</html>

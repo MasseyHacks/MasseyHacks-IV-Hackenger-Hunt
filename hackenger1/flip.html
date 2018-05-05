@@ -1,0 +1,54 @@
+<!--Q5-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<div id = "cover" class = "wrapper">
+<h1>Question 5</h1>
+<p>Hlnvgsrmt rh GLGZOob hgizmtv drgs gsv olxpvi mfnyvih yvgdvvm illn lmv uligb vrtsg zmw lmv urugb ulfi</p>
+<p>Hint: If you can't solve this you might flip out</p>
+</div>
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/W8UJDH8Xd1sXJtiq6CsEOQ8aUo1ZQaGC6q9zV7kYZBJyURMOh4iVIeTssJi6HMzE2y1LwaxjB7HlMhXS95BHalZqS5npHKRx6J6q/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+
+</body>
+</html>

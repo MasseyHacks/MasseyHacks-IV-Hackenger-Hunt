@@ -1,0 +1,52 @@
+<!--Q2-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--custom CSS-->
+<link href = "index.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+<h1>Question 2</h1>
+<p>It's leg day at Massey! Every student has the goal of reaching 2018 steps before class starts. One student decides to reach his goal by only walking up and down the stairs in the school's front rotunda. Assume that the student starts by walking up the stairs from the first floor, takes 1 step on each stair of the staircase while walking, and takes exactly 3 steps on the landing platform that divides the staircase in two. When he reaches either the first or second floor, only 1 step is counted before he turns around and walks back up (if he just touched the first floor) or back down (if he was just on the second floor). The student's first class is Physical Education in the South Gym. How many more steps does the student have to take to get to the second floor after his 2018th step?</p>
+
+
+<div id = "btnContainer">
+	<input type = "text" id = "userInp" /><br>
+	<button id = "sub" class = "btn btn-primary">Submit</button>
+</div>
+<script src = "sweetalert2.all.js"></script>
+<script>
+$("#sub").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "/oeOgMZKkucyUWk6UWyVcNDPZkBQczudOySS8FsgXuFIeNCWzYIzz9dojE2l3mmHI2pHyGNlYgR3TkPg6lEwkHKtbDC2NPymFNT3h/" + $("#userInp").val().replace(/[ \"\';\-\.,:#@!\?%\^\$\*\)\(\\\/\+]/g,''),
+		success: function(o){
+			if(o == "/wronganswer"){
+				swal("Wrong answer!",$("#userInp").val() + "... what were you thinking?","error");
+			} else{
+				swal("Correct answer!","On to the next challenge...","success").then(function(){
+				window.location.href = o;
+				});
+			}
+		}
+	});
+});
+$("#userInp").keypress(function(e){
+	if(e.which == 13){
+		$("#sub").focus().click();
+	}
+});
+</script>
+</body>
+</html>
