@@ -4,7 +4,7 @@ The source code for the legendary Hackenger Hunt at MasseyHacks IV
 
 To start server: `node app.js`
 
-Visit `localhost:3000` for Hackenger 1 or `localhost:3001` for Hackenger 2
+Visit `localhost:3000` for Hackenger 1 or `localhost:3001` for Hackenger 2 or `localhost:3002` for 2nd part of Hackenger 2
 
 ## Solutions
 Hackenger 1
@@ -33,6 +33,8 @@ Hackenger 2
 8. After connecting to the router (which was a raspberry pi hidden in a locker), you must perform a "[heart bleed exploit](https://xkcd.com/1354/)" to get to the next step. In this case, it was a Python socket server running on port 1511 (The locker number which can be determined via signal strength).
 <br><br>
 In the example data set (["Pineapple", 9]), the numerical value after the string corresponds to the length of the string. This determines the amount of data that is sent back. To solve, you must send a request with a very large "size". (["Pineapple",99999]) In return, the server sends a pickled dump with gcode encoded in base64. The gcode can then be ran on a 3D printer which causes it to play a song (chasing cars).<br>
+
+Source for Raspberry Pi script can be found [here](https://github.com/MasseyHacks/MasseyHacks-IV-Hackenger-Hunt-Heartbleed)
 
 Hackenger website programmed by You Zhou<br>
 
