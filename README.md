@@ -8,4 +8,4 @@ Visit `localhost:3000` for Hackenger 1 or `localhost:3001` for Hackenger 2
   
 Hackenger website programmed by You Zhou<br>
 
-Questions by Henry Tu, Ryan Zhang, Aaron Li, Anita Hu, Hamza Sayed-Ali
+Questions by [Henry Tu](https://github.com/henrytwo), [Ryan Zhang](https://github.com/ryanz34), [Aaron Li](https://github.com/AaronLi), Anita Hu, Hamza Sayed-Ali
