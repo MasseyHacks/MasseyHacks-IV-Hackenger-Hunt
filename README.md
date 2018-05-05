@@ -20,7 +20,8 @@ Hackenger 1
 10. CLEARCUT
 <br><br>
 
-Hackenger 2<br>
+Hackenger 2
+
 0. jerrbear
 1. 65922
 2. 50
