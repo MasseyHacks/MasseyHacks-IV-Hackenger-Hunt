@@ -29,10 +29,10 @@ Hackenger 2
 4. the current unix time stamp
 5. you had to access the 403 server on the masseyhacks.ca domain (for example go to masseyhacks.ca/css) and you'll see a page that says "*Error 403* Hey, you don't have access to that!" You notice that "ACCESS" was in all caps in question 5, so you click "ACCESS" on the 403 page to access the question. It asks "What did I say?" to which you respond "You shall not pass"
 6. Although practicality beats purity
-7. there are 2 apache helicopters, which represents the apache 2 server. so you have to find the router (it was in locker 1511) and connect to it using the password  1Jk2Zd62y8MFIOrpXL1cGto0gEwF6s5HXN66xfWcTgSnE7oChG.
-8. After connecting to the router (which is a raspberry pi in a locker), you must perform a "[heart bleed exploit](https://xkcd.com/1354/)" to get to the next step. In this case, it was a Python socket server running on port 1511.
+7. There are 2 apache helicopters, which represents the apache 2 server. This information is used after connecting to the wireless network named sideways and connect to it using the password 1Jk2Zd62y8MFIOrpXL1cGto0gEwF6s5HXN66xfWcTgSnE7oChG.
+8. After connecting to the router (which was a raspberry pi hidden in a locker), you must perform a "[heart bleed exploit](https://xkcd.com/1354/)" to get to the next step. In this case, it was a Python socket server running on port 1511 (The locker number which can be determined via signal strength).
 <br><br>
-In the example data set (["Pineapple", 9]), the numerical value after the string corresponds to the length of the string. This determines the amount of data that is sent back. To solve, you must send a request with a very large "size". (["Pineapple",99999]) In return, the server sends a dump with gcode encoded in base64. The gcode can then be ran on a 3D printer which causes it to play a song (chasing cars).<br>
+In the example data set (["Pineapple", 9]), the numerical value after the string corresponds to the length of the string. This determines the amount of data that is sent back. To solve, you must send a request with a very large "size". (["Pineapple",99999]) In return, the server sends a pickled dump with gcode encoded in base64. The gcode can then be ran on a 3D printer which causes it to play a song (chasing cars).<br>
 
 Hackenger website programmed by You Zhou<br>
 
