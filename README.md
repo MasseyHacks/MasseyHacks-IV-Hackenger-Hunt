@@ -7,7 +7,7 @@ To start server: `node app.js`
 Visit `localhost:3000` for Hackenger 1 or `localhost:3001` for Hackenger 2
 
 ## Solutions
-######Hackenger 1
+###ackenger 1
 1. World
 2. 2
 3. ecoo
@@ -19,7 +19,7 @@ Visit `localhost:3000` for Hackenger 1 or `localhost:3001` for Hackenger 2
 9. Mario
 10. CLEARCUT
 <br><br>
-######Hackenger 2
+###Hackenger 2
 0. jerrbear
 1. 65922
 2. 50
